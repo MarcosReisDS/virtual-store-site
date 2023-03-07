@@ -1,0 +1,101 @@
+.filter-price {
+    &>span {
+        font-size: 20px;
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &>.plus {
+            font-size: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+    }
+
+    &>.container-slider {
+        width: 85%;
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 20px;
+
+        &>div {
+            margin-top: 0;
+            width: 100%;
+            height: 1.5px;
+            background-color: #dedede;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            &>div {
+                content: "";
+                position: absolute;
+                top: 0px;
+                bottom: 0;
+                background-color: #cac7c7;
+                height: 2px;
+                z-index: 1;
+
+                &:last-child {
+                    right: 0;
+                }
+            }
+
+            &>input[type="range"] {
+                width: 100%;
+                position: absolute;
+                background-color: transparent;
+                appearance: none;
+                pointer-events: none;
+                top: 0;
+                bottom: 0;
+                z-index: 9;
+
+                &:active::-webkit-slider-thumb {
+                    width: 21px;
+                    height: 21px;
+                    background-color: black;
+                    border-radius: 100%;
+                    appearance: none;
+                    pointer-events: auto;
+                    cursor: pointer;
+                    transition: .1s
+                }
+
+                &::-webkit-slider-thumb {
+                    width: 18px;
+                    height: 18px;
+                    background-color: black;
+                    border-radius: 100%;
+                    appearance: none;
+                    pointer-events: auto;
+                    cursor: pointer;
+                    transition: .1s;
+                }
+            }
+        }
+
+        &>.progress {
+            height: 1.5px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    &>div {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &>hr {
+        width: 200px;
+        height: 1px;
+        background-color: rgb(128, 128, 128, .3);
+        border: none;
+        margin-top: 20px;
+    }
+}

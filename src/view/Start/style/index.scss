@@ -1,0 +1,223 @@
+.container-start {
+    width: 100%;
+
+    &>.foto {
+        width: 100%;
+        position: relative;
+        height: 87vh;
+
+        &>.container-foto {
+            width: 100%;
+            height: 100%;
+
+            &>.foto-tenis {
+                background-image: url('https://static.wixstatic.com/media/84770f_e79251bac8554e33b08eb677c53a8e87~mv2.jpg/v1/fill/w_980,h_800,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_e79251bac8554e33b08eb677c53a8e87~mv2.jpg');
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        }
+
+        &>.container-informs {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            background-color: rgba(0, 0, 0, .4);
+
+            &>.container-quite {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+                &>.as {
+                    font-size: 300px;
+                    color: #fff;
+                    margin-top: -20px;
+                }
+
+                &>.line {
+                    width: 340px;
+                    height: 23px;
+                    border: none;
+                    position: relative;
+                    bottom: 167px;
+                    background-color: #fff;
+                }
+
+                &>.name {
+                    color: #fff;
+                    font-size: 50px;
+                    letter-spacing: 8px;
+                    margin-top: -50px;
+
+                }
+
+                &>.button-buy {
+                    width: 230px;
+                    height: 45px;
+                    color: #000;
+                    background-color: #fff;
+                    border: none;
+                    font-size: 25px;
+                    transition: .3s;
+                    margin-top: 20px;
+
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+
+        &>.container-man-woman {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            &>div {
+                width: 50%;
+                background-color: #000;
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    &>.box-image {
+                        background-size: 110%;
+                    }
+                }
+
+                &>.box-image {
+                    width: 100%;
+                    height: 500px;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    transition: 1s;
+
+                    &.man {
+                        background-image: url("https://static.wixstatic.com/media/84770f_947e5c5f36f841908cc0472b141492f1~mv2.jpg/v1/fill/w_490,h_368,q_90/84770f_947e5c5f36f841908cc0472b141492f1~mv2.webp");
+                    }
+
+                    &.woman {
+                        background-image: url("https://static.wixstatic.com/media/84770f_894bbd9b59ec4b6581ab5c9b6b310743~mv2.jpg/v1/fill/w_490,h_368,q_90/84770f_894bbd9b59ec4b6581ab5c9b6b310743~mv2.webp");
+                    }
+                }
+
+                &>.tranparent {
+                    background-color: rgba(0, 0, 0, .3);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+
+                    &>.collection {
+                        color: #fff;
+                        font-size: 40px;
+                        margin-top: 35%;
+                        transition: .6s;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+                    }
+                }
+
+            }
+        }
+
+
+        &>.several-tennis {
+            background-color: #ededee;
+            width: 100%;
+            height: 780px;
+
+            &>.container-tenis {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &>.tennis {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &>.tenis {
+                        width: 300px;
+                        height: 300px;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        display: flex;
+                        margin-top: 70px;
+                        transition: .7s;
+
+                        &:hover {
+                            background-size: 105%;
+                            background-position: -10px -10px;
+                            transition: .6s;
+                            cursor: pointer;
+                        }
+
+
+                        &.one {
+                            background-image: url("https://static.wixstatic.com/media/84770f_deb028dbaa0944aabb8ddd538d2ed598.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_deb028dbaa0944aabb8ddd538d2ed598.webp");
+                        }
+
+                        &.two {
+                            background-image: url("https://static.wixstatic.com/media/84770f_fe645b9caa874735ad2b817f5ee77551.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_fe645b9caa874735ad2b817f5ee77551.webp");
+                        }
+
+                        &.three {
+                            background-image: url("https://static.wixstatic.com/media/84770f_054990a92c9e4b28bcc929a20b034302.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_054990a92c9e4b28bcc929a20b034302.webp");
+                        }
+
+                        &.four {
+                            background-image: url("https://static.wixstatic.com/media/84770f_3ed8b7af19324b2fa5215afa327aefb7.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_3ed8b7af19324b2fa5215afa327aefb7.webp");
+                        }
+
+                        &.five {
+                            background-image: url("https://static.wixstatic.com/media/84770f_a76d377940e049d0baaf2a10265711f5.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_a76d377940e049d0baaf2a10265711f5.webp");
+                        }
+
+                        &.six {
+                            background-image: url("https://static.wixstatic.com/media/84770f_732eed9a72de449a853444132e1cda25.png/v1/fill/w_290,h_290,al_c,q_90,usm_0.66_1.00_0.01/84770f_732eed9a72de449a853444132e1cda25.webp");
+                        }
+                    }
+                }
+            }
+        }
+
+        &>.logo-big {
+            margin-left: 35%;
+
+            &>span {
+                color: #fff;
+                font-size: 350px;
+
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            &>hr {
+                width: 400px;
+                height: 30px;
+                background-color: #fff;
+                border: none;
+                position: relative;
+                right: 24px;
+                bottom: 200px;
+            }
+        }
+
+       
+
+    }
+}

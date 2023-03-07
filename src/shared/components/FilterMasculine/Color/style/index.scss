@@ -1,0 +1,83 @@
+.filter-color {
+    &>span {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+
+        &>.plus {
+            font-size: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+
+    &>.container-color-masculine {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        &>.color-primary {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #d2cdbd;
+            border-radius: 100%;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            &.yellow {
+                background-color: #f5cf5c;
+            }
+
+            &.blue {
+                background-color: #5383af;
+            }
+
+            &.white {
+                background-color: #fff;
+            }
+
+            &.black {
+                background-color: #000;
+            }
+
+            &>.color {
+                width: 20px;
+                height: 20px;
+                top: -1px;
+                left: -1px;
+                appearance: none;
+                border: none;
+                border-radius: 100%;
+                background-color: transparent;
+                position: absolute;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(253, 253, 253, 0.247);
+                }
+
+                &:checked {
+                    background-color: transparent;
+                    border: 1px solid rgb(129, 129, 129);
+                    width: 26px;
+                    height: 26px;
+                    margin-top: -3px;
+                    margin-left: -3px;
+                }
+            }
+        }
+    }
+
+    &>hr {
+        width: 200px;
+        height: 1px;
+        background-color: rgb(128, 128, 128, .3);
+        border: none;
+        margin-top: 20px;
+    }
+}

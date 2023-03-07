@@ -1,0 +1,21 @@
+.container-filter {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+
+    &>.filter {
+        &>.name {
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        &>hr {
+            width: 200px;
+            height: 1px;
+            background-color: rgb(128, 128, 128, .3);
+            border: none;
+            margin-top: 20px;
+        }
+    }
+}
