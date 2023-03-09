@@ -1,137 +1,139 @@
 .container-main {
     width: 100%;
     height: 13vh;
+
     background-color: #000;
-    display: flex;
-    justify-content: space-between;
 
-    &>.logo {
-        margin-left: 200px;
+    &>div {
+        width: 100%;
+
         display: flex;
-        align-items: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-        &>.as {
-            color: #fff;
-            font-size: 42px;
-            font-weight: 100;
-        }
-
-        &>.line {
-            position: absolute;
-            top: 43px;
-            left: 195px;
-            width: 50px;
-            height: 3px;
-            border: none;
-            background-color: #fff;
-        }
-
-        &>.name {
-            color: #fff;
-            letter-spacing: 3px;
-            font-size: 15px;
-            margin-left: 20px;
-            margin-top: 6px;
-
-        }
-    }
-
-    &>.navigation {
-        width: 45%;
-        margin-right: 200px;
-        display: flex;
-        align-items: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         justify-content: space-between;
 
-        &>.navbar {
-            width: 450px;
-            font-size: 16px;
+        &>.container-logo {
+            height: 30px;
+
             display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            margin-right: 60px;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
 
-            &>.start {
-                color: #fff;
-                transition: .30s;
+            &>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-                &:hover {
-                    color: #afaeae;
-                    cursor: pointer;
-                    transition: .30s;
-                }
-            }
+                position: relative;
 
-            &>.store {
-                color: #fff;
-                transition: .30s;
-                display: inline;
+                &>span {
+                    font-size: 50px;
+                    font-family: sans-serif;
 
-                &:hover {
-                    transition: .30s;
-                    cursor: default;
-                }
-            }
-            &>.container-store {
-                flex-direction: column;
-                position: absolute;
-                text-align: center;
-                z-index: 9999;
-                top: 70px;
-                background-color: #000;
-                padding: 10px;
-                margin-left: 10px;
-                width: 130px;
-                gap: 10px;
-                &>.content {
                     color: #fff;
-                    top: 20px;
+                }
+
+                &>hr {
+                    width: 65px;
+                    height: 3px;
+
+                    border: none;
+
+                    position: absolute;
+                    top: 30px;
+
+                    background-color: #fff;
+                }
+            }
+
+            &>span {
+                font-size: 20px;
+                letter-spacing: 3px;
+
+                padding-top: 5px;
+
+                color: #fff;
+            }
+        }
+
+        &>.container-nav {
+            display: flex;
+            gap: 50px;
+
+            &>div {
+                display: flex;
+                gap: 40px;
+
+                &>.button {
+                    font-size: 15px;
+                    font-family: sans-serif;
+
+                    transition: .4s;
+
+                    background-color: #000;
+                    color: #fff;
+
+                    &.store {
+                        &:hover {
+                            cursor: auto;
+
+                            color: #fff;
+                        }
+                    }
+
+                    &.login {
+                        color: #ffae36;
+                    }
+
                     &:hover {
-                        color: #afaeae;
                         cursor: pointer;
-                        transition: .30s;
+
+                        transition: .4s;
+
+                        color: #999898;
+                    }
+                }
+
+                &>div {
+                    padding: 5px 20px;
+
+                    flex-direction: column;
+                    gap: 10px;
+
+                    position: absolute;
+
+                    z-index: 9;
+
+                    margin: 35px 0px 0px 10px;
+
+                    background-color: #000;
+
+                    &>.button {
+                        font-size: 15px;
+                        font-family: sans-serif;
+
+                        transition: .4s;
+
+                        background-color: #000;
+                        color: #fff;
+
+                        &:hover {
+                            cursor: pointer;
+
+                            transition: .4s;
+
+                            color: #999898;
+                        }
                     }
                 }
             }
 
-            &>.about {
-                color: #fff;
-                transition: .30s;
+            &>.cart-login {
+                display: flex;
+                align-items: center;
+                gap: 15px;
 
-                &:hover {
-                    color: #afaeae;
-                    cursor: pointer;
-                    transition: .30s;
-                }
-            }
-
-            &>.service {
-                color: #fff;
-                transition: .30s;
-
-                &:hover {
-                    color: #afaeae;
-                    cursor: pointer;
-                    transition: .30s;
-                }
-            }
-        }
-
-        &>.my-settings {
-            width: 140px;
-            font-size: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            margin-top: 20px;
-
-            &>.login {
-                color: orange;
+                padding-bottom: 5px;
             }
         }
     }
-
 }

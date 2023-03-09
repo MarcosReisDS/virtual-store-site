@@ -7,84 +7,90 @@ import "./style/index.scss"
 interface INavBar { }
 const NavBar: FC<INavBar> = () => {
 
-    const [appear, setAppear] = useState<boolean>(false)
+    const [showNav, setShowNav] = useState<boolean>(false)
     const navigate = useNavigate()
 
-    const handleAppear = (appear: boolean) => {
-        setAppear(appear)
-        setTimeout(() => {
-            setAppear(false)
-        }, 5000)
+    const nada = (show: boolean) => {
+
+     
     }
 
-    const handleNavi = (nav: "start" | "masculine" | "feminine" | "promotions" | "about" | "service") => {
+
+
+    const handleNavigation = (nav: string) => {
         switch (nav) {
             case "start":
                 navigate("/inicio")
                 break;
-
-            case "masculine":
-                navigate("/loja/masculino")
-                break;
-
-            case "feminine":
-                navigate("/loja/feminino")
-                break;
-
-            case "promotions":
-                navigate("/loja/promocoes")
-                break;
-
             case "about":
                 navigate("/sobre")
                 break;
-
             case "service":
                 navigate("/atendimento")
                 break;
         }
     }
 
-
     return (
         <div className="container-main">
-            <div className="logo">
-                <span className="as">as</span>
-                <hr className="line" />
-                <span className="name">atual sneakers</span>
-            </div>
-            <div className="navigation">
-                <div className="navbar">
-                    <span className="start"
-                        onMouseOver={() => handleAppear(false)}
-                        onClick={() => handleNavi("start")}
-                    >
-                        Início
-                    </span>
-                    <span className="store" onMouseOver={() => handleAppear(true)}>Loja</span>
-                    <div className="container-store" style={{ display: appear ? "flex" : "none" }} >
-                        <span className="content" onClick={() => handleNavi("masculine")}>Masculino</span>
-                        <span className="content" onClick={() => handleNavi("feminine")}>Feminino</span>
-                        <span className="content" onClick={() => handleNavi("promotions")}>Promoções</span>
-
+            <div className="container-header">
+                <div className="container-logo">
+                    <div>
+                        <span>as</span>
+                        <hr />
                     </div>
-                    <span className="about"
-                        onMouseOver={() => handleAppear(false)}
-                        onClick={() => handleNavi("about")}
-                    >
-                        Sobre AS
-                    </span>
-                    <span className="service"
-                        onMouseOver={() => handleAppear(false)}
-                        onClick={() => handleNavi("service")}
-                    >
-                        Atendimento ao Cliente
-                    </span>
+                    <span>atual sneakers</span>
                 </div>
-                <div className="my-settings">
-                    <UserIcon />
-                    <span className="login">Login</span>
-                    <Cart />
+
+                <div className="container-nav" >
+                    <div>
+                        <button className="button"
+                            onClick={() => handleNavigation("start")}
+                            onMouseOver={() => setShowNav(false)}
+                        >
+                            Início
+                        </button>
+                        <button className="button store"
+                            onMouseOver={() => nada(true)}
+                            onMouseOut={() => nada(false)}
+                        >
+                            Loja
+                        </button>
+                        <div className="store" style={{ display: showNav ? "flex" : "none" }}>
+                            <button className="button"
+                                onMouseOver={() => nada(true)}
+                            >
+                                Masculino
+                            </button>
+                            <button className="button"
+                                onMouseOver={() => setShowNav(true)}
+                            >
+                                Feminino
+                            </button>
+                            <button className="button"
+                                onMouseOver={() => setShowNav(true)}
+                            >
+                                Promoções
+                            </button>
+                        </div>
+                        <button className="button"
+                            onClick={() => handleNavigation("about")}
+                            onMouseOver={() => setShowNav(false)}
+                        >
+                            Sobre AS
+                        </button>
+                        <button className="button"
+                            onClick={() => handleNavigation("service")}
+                            onMouseOver={() => setShowNav(false)}
+                        >
+                            Atendimento ao Client
+                        </button>
+                    </div>
+                    <div className="cart-login">
+                        <UserIcon />
+                        <button className="button login">Login</button>
+                        <Cart />
+                    </div>
                 </div>
             </div>
         </div>
