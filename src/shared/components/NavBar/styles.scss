@@ -4,16 +4,28 @@
     display: flex;
     padding: 0px 180px;
 
+    @media (max-width: 1090px) {
+        padding: 10px 100px;
+    }
+
     &>.container-logo {
         width: 40%;
         display: flex;
         align-items: center;
         gap: 20px;
 
+        @media (max-width: 1090px) {
+            flex-direction: column;
+            gap: 0;
+            align-items: start;
+        }
+
+
         &>.logo {
             font-size: 19px;
             position: relative;
             cursor: pointer;
+
             &>span {
                 width: 55px;
                 height: 3px;
@@ -23,6 +35,7 @@
                 right: -5px;
             }
         }
+
         &>.name-logo {
             font-size: 15px;
             letter-spacing: 5px;
@@ -44,6 +57,10 @@
             padding: 17px 0px;
             font-size: 15px;
             white-space: nowrap;
+
+            @media (max-width: 1090px) {
+                display: none;
+            }
 
             &.pages {
                 &>li {
@@ -142,5 +159,151 @@
             }
 
         }
+    }
+
+    &>.container-navigation-mobile {
+        display: none;
+
+        @media (max-width: 1090px) {
+            width: 60%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+
+            &>.cart {
+                position: relative;
+                cursor: pointer;
+
+                &>span {
+                    position: absolute;
+                    top: 14px;
+                    color: #fff;
+                    left: 12px;
+                    font-size: 15px;
+                }
+            }
+
+            &>.hamburger {
+                width: 60px;
+                height: 60px;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+                cursor: pointer;
+                position: relative;
+                z-index: 999999;
+
+                &.close {
+                    gap: 0px;
+
+                    &>span {
+                        position: absolute;
+
+                        &:nth-child(1) {
+                            transform: rotate(50deg);
+                        }
+
+                        &:nth-child(2) {
+                            transform: rotate(-50deg);
+                        }
+                    }
+                }
+
+
+                &>span {
+                    width: 40%;
+                    height: 2px;
+                    background-color: #000;
+                    display: block;
+
+
+                }
+            }
+
+            &>.navigation {
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 999;
+                color: #000;
+
+                &.close {
+                    display: none;
+                }
+
+                &>div {
+                    margin: 30px 110px;
+                    font-size: 17px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    color: #ffae36;
+
+                    &>img {
+                        width: 27px;
+                        height: 27px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                &>ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 0px 140px;
+                    font-size: 21px;
+                    gap: 20px;
+
+                    &>li {
+                        cursor: pointer;
+                        width: 100%;
+
+                        &:nth-child(2) {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: relative;
+
+                            &.open {
+                                margin-bottom: 170px;
+
+                                &>span {
+                                    transform: rotate(180deg);
+                                }
+                            }
+
+                            &>ul {
+                                display: none;
+
+                                &>li {
+                                    cursor: pointer;
+                                }
+
+                                &.itens {
+                                    list-style-type: none;
+                                    position: absolute;
+                                    top: 55px;
+                                    padding: 0px 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 30px;
+                                    width: 100%;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -1,9 +1,15 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import "./styles.scss"
 import { BsFillHandbagFill } from "react-icons/bs";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface INavBar { }
 const NavBar: FC<INavBar> = () => {
+
+    const [openMobile, setOpenMobile] = useState<boolean>(false)
+    const [openModalMobile, setOpenModalMobile] = useState<boolean>(false)
+
+
     return (
         <div className="container-nav-bar">
             <div className="container-logo">
@@ -40,6 +46,44 @@ const NavBar: FC<INavBar> = () => {
                         </ul>
                     </li>
                 </ul>
+            </div>
+            <div className="container-navigation-mobile">
+                <div className="cart">
+                    <BsFillHandbagFill color="#ffae36" size="32" />
+                    <span>0</span>
+                </div>
+                <div className={openModalMobile ? "hamburger close" : "hamburger"} onClick={() => openModalMobile ? setOpenModalMobile(false) : setOpenModalMobile(true)}>
+                    {openModalMobile ?
+                        <>
+                            <span />
+                            <span />
+                        </>
+                        :
+                        <>
+                            <span />
+                            <span />
+                            <span />
+                        </>
+                    }
+                </div>
+                <div className={openModalMobile ? "navigation" : "navigation close"}>
+                    <div>
+                        <img src="https://i.pinimg.com/564x/d8/82/58/d882585e5fde45a1b1ee0886ba433021.jpg" />
+                        <span>Login</span>
+                    </div>
+                    <ul>
+                        <li><a>Início</a></li>
+                        <li className={openMobile ? "open" : ""} onClick={() => openMobile ? setOpenMobile(false) : setOpenMobile(true)}><a>Loja </a><span><IoIosArrowDown /></span>
+                            <ul className={openMobile ? "itens" : ""}>
+                                <li><a>Masculino</a></li>
+                                <li><a>Feminino</a></li>
+                                <li><a>Promoções</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Sobre AS</a></li>
+                        <li><a>Atendimento ao Cliente</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
