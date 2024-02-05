@@ -2,4 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("https://static.wixstatic.com/media/1e47b2_12e77e928f02484aa3973c8e62bad393.jpg/v1/fill/w_980,h_561,al_t,q_85,usm_0.66_1.00_0.01,enc_auto/1e47b2_12e77e928f02484aa3973c8e62bad393.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; 
 }
