@@ -1,11 +1,14 @@
 import { FC } from "react"
+import Router from "./shared/router"
+import NavBar from "./shared/components/NavBar"
 
 interface IApp { }
 const App: FC<IApp> = () => {
   return (
-    <div>
-      HELLO WORLD!
-    </div>
+    <>
+      <NavBar />
+      <Router />
+    </>
   )
 }
 
