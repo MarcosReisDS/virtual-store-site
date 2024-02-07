@@ -1,8 +1,11 @@
 .container-nav-bar {
+    width: 100%;
     background-color: #000;
     color: #fff;
     display: flex;
     padding: 0px 180px;
+    position: fixed;
+    z-index: 9999999;
 
     @media (max-width: 1090px) {
         padding: 10px 100px;
@@ -94,6 +97,7 @@
                             gap: 10px;
                             padding: 8px 20px;
                             right: -25px;
+                            z-index: 9999;
 
                             &>li {
                                 cursor: pointer;
