@@ -122,6 +122,22 @@
 
                 &>.card {
                     cursor: pointer;
+                    
+                    &:hover {
+                        &>.img {
+                     
+    
+                            &>img {
+                                transform: scale(1.2);
+                            }
+                        }
+                        &>.content {
+
+                            &>button {
+                                opacity: 1;
+                            }
+                        }
+                    }
 
                     &>.img {
                         background-color: #ededee;
@@ -132,6 +148,7 @@
 
                         &>img {
                             width: 80%;
+                            transition: .4s;
                         }
                     }
 
@@ -158,6 +175,7 @@
                             padding: 7px 0px;
                             cursor: pointer;
                             transition: .3s;
+                            opacity: 0;
 
                             &:hover {
                                 opacity: .7;
