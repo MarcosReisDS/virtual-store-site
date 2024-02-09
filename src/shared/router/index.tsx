@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../../view/Home";
 import Store from "../../view/Store";
 import About from "../../view/About";
+import Service from "../../view/Service";
 
 interface IRouter { }
 const Router: FC<IRouter> = () => {
@@ -13,6 +14,7 @@ const Router: FC<IRouter> = () => {
             <Route path="/loja/feminino" element={<Store />} />
             <Route path="/loja/promocoes" element={<Store />} />
             <Route path="/sobre" element={<About />} />
+            <Route path="/atendimento" element={<Service />} />
         </Routes>
     )
 }
