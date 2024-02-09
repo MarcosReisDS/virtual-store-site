@@ -50,20 +50,10 @@ const NavBar: FC<INavBar> = () => {
                                             ))}
                                         </ul>
                                     </>
-
                                     :
                                     ""
                                 }
                             </li>
-                            {/* <li className="loja"><a>Loja</a>
-                                <ul>
-                                    <li><a>Masculino</a></li>
-                                    <li><a>Feminino</a></li>
-                                    <li><a>Promoções</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Sobre AS</a></li>
-                            <li><a>Atendimento ao Cliente</a></li> */}
                         </>
                     ))}
                 </ul>
