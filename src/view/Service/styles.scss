@@ -1,0 +1,176 @@
+.container-service {
+    &>.header {
+        padding: 150px 0px 80px 200px;
+        position: relative;
+
+        &>p {
+            color: #fff;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        &>span {
+            padding: 3px 330px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 107px;
+        }
+    }
+
+    &>.body {
+        &>.speak {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding: 35px 0px 110px;
+
+            &>img {
+                width: 70%;
+                object-fit: cover;
+            }
+
+            &>.box {
+                background-color: #fff;
+                position: absolute;
+                right: 240px;
+                top: 200px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+
+                &>.top {
+                    position: relative;
+
+                    &>p {
+                        font-size: 25px;
+                        font-weight: bolder;
+                    }
+
+                    &>span {
+                        width: 210px;
+                        height: 3px;
+                        background-color: #000;
+                        position: absolute;
+                        top: 13px;
+                    }
+                }
+
+                &>div {
+                    font-size: 15px;
+                }
+
+                &>.inputs {
+                    display: flex;
+                    gap: 12px;
+
+                    &>div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        &>input {
+                            border: 1px solid #000;
+                            background-color: transparent;
+                            padding: 5px 0px 5px 15px;
+                            font-size: 14px;
+
+                            &::placeholder {
+                                color: #000;
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        &>textarea {
+                            height: 100%;
+                            resize: none;
+                            font-size: 14px;
+                            padding: 10px 20px;
+
+                            &::placeholder {
+                                color: #000;
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                &>.button {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: -10px;
+
+                    &>button {
+                        border: none;
+                        background-color: transparent;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: .4s;
+
+                        &:hover {
+                            color: #ffa927;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>.header-faq {
+            padding: 45px 0px 40px 200px;
+            position: relative;
+
+            &>p {
+                color: #fff;
+                font-size: 48px;
+                font-weight: bold;
+            }
+
+            &>span {
+                padding: 3px 60px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 66px;
+            }
+        }
+
+        &>.faq {
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 70px 200px;
+            gap: 70px;
+
+            &>.content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &>div {
+                    &:nth-child(1) {
+                        font-size: 27px;
+                        font-weight: bolder;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 19px;
+                        font-weight: 600;
+                        width: 90%;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 17px;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+    }
+}
