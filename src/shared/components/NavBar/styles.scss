@@ -70,6 +70,11 @@
                     cursor: pointer;
                     transition: .4s;
 
+                    &>a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
                     &:hover {
                         opacity: 0.5;
                     }
@@ -102,6 +107,11 @@
                             &>li {
                                 cursor: pointer;
                                 transition: .4s;
+
+                                &>a {
+                                    color: #fff;
+                                    text-decoration: none;
+                                }
 
                                 &:hover {
                                     opacity: 0.5;
