@@ -1,0 +1,123 @@
+.container-about {
+    &>.header {
+        padding: 150px 0px 80px 200px;
+        position: relative;
+
+        &>p {
+            color: #fff;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        &>span {
+            padding: 3px 160px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 107px;
+        }
+    }
+
+    &>.body {
+        background-color: #fff;
+        padding: 50px 0px 90px 0px;
+
+        &>.you {
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &>div {
+                &:nth-child(2) {
+                    margin-left: -80px;
+                    margin-top: 280px;
+
+                    &>div {
+                        font-size: 15px;
+                        margin-top: 5px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            &>.title {
+                position: absolute;
+                width: 30%;
+                background-color: #fff;
+                font-size: 17px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 50px;
+                top: 125px;
+            }
+
+        }
+
+        &>.local-hours {
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+
+            &>.local {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-top: -90px;
+                &>.header {
+                    position: relative;
+                    &>p {
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+                    &>span {
+                        width: 230px;
+                        height: 3px;
+                        position: absolute;
+                        background-color: #000;
+                        top: 13px;
+                        left: -2px;
+                    }
+                }
+                &>div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3px;
+                    &>p {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            &>.hours {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 90px;
+
+                &>.header {
+                    position: relative;
+                    &>p {
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+                    &>span {
+                        width: 160px;
+                        height: 3px;
+                        position: absolute;
+                        background-color: #000;
+                        top: 20px;
+                        left: -2px;
+                    }
+                }
+                &>div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    &>p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
