@@ -50,7 +50,7 @@ const Home: FC<IHome> = () => {
                     <img src="https://i.ibb.co/gD92kh1/pngwing-com.png" alt="" />
                 </div>
             </div>
-            <div className="footer">
+            <div className="footer-home">
                 <div className="logo">
                     <p>as</p>
                     <span />
