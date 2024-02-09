@@ -2,9 +2,11 @@ import { FC, useState } from "react"
 import { SlArrowDown } from "react-icons/sl";
 import Footer from "../../shared/components/Footer";
 import "./styles.scss"
+import { useNavigate } from "react-router-dom";
 
 interface IStore { }
 const Store: FC<IStore> = () => {
+    const navigate = useNavigate()
     const [plusFilter, setPlusFilter] = useState<boolean>(false)
 
     return (
@@ -72,7 +74,7 @@ const Store: FC<IStore> = () => {
                         </div>
                     </div>
                     <div className="cards">
-                        <div className="card">
+                        <div className="card" onClick={() => navigate("/loja/masculino/1")}>
                             <div className="img">
                                 <img src="https://i.ibb.co/sP3kmTQ/pngwing-com-1.png" alt="" />
                             </div>
@@ -82,7 +84,7 @@ const Store: FC<IStore> = () => {
                                 <button>Adicionar ao carrinho</button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card" onClick={() => navigate("/loja/masculino/1")}>
                             <div className="img">
                                 <img src="https://i.ibb.co/sP3kmTQ/pngwing-com-1.png" alt="" />
                             </div>
@@ -92,7 +94,7 @@ const Store: FC<IStore> = () => {
                                 <button>Adicionar ao carrinho</button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card" onClick={() => navigate("/loja/masculino/1")}>
                             <div className="img">
                                 <img src="https://i.ibb.co/sP3kmTQ/pngwing-com-1.png" alt="" />
                             </div>
@@ -102,7 +104,7 @@ const Store: FC<IStore> = () => {
                                 <button>Adicionar ao carrinho</button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card" onClick={() => navigate("/loja/masculino/1")}>
                             <div className="img">
                                 <img src="https://i.ibb.co/sP3kmTQ/pngwing-com-1.png" alt="" />
                             </div>
