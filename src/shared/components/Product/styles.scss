@@ -55,22 +55,15 @@
                     &>div {
                         position: relative;
 
-                        &>input {
+                        &>select {
                             font-size: 16px;
                             width: 100%;
                             border: 1px solid #000;
-                            padding: 5px 0px 5px 10px;
+                            padding: 5px;
 
                             &:focus {
                                 outline: none;
                             }
-                        }
-
-                        &>.arrow {
-                            position: absolute;
-                            right: 10px;
-                            top: 8px;
-                            font-size: 13px;
                         }
                     }
                 }
@@ -101,7 +94,6 @@
                             &>span {
                                 width: 20px;
                                 height: 20px;
-                                background-color: blue;
                                 display: block;
                                 border-radius: 50%;
                             }
@@ -120,15 +112,47 @@
 
                     &>div {
                         width: 100%;
+                        position: relative;
 
                         &>input {
                             font-size: 16px;
                             width: 24%;
                             border: 1px solid #000;
-                            padding: 5px 0px 5px 10px;
+                            padding: 8px 0px 8px 10px;
+
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                            }
+
+                            appearance: textfield;
+
+                            &:disabled {
+                                background-color: #fff;
+                                color: #000;
+                            }
 
                             &:focus {
                                 outline: none;
+                            }
+                        }
+
+                        &>.positive-negative {
+                            display: flex;
+                            flex-direction: column;
+                            position: absolute;
+                            top: 2px;
+                            left: 60px;
+
+                            &>.arrow {
+                                cursor: pointer;
+                                &.positive {
+                                    transform: rotate(180deg);
+                                }
+
+                                &.disabled {
+                                    color: #00000057;
+                                    cursor: default;
+                                }
                             }
                         }
                     }
