@@ -4,19 +4,27 @@ import Home from "../../view/Home";
 import Store from "../../view/Store";
 import About from "../../view/About";
 import Service from "../../view/Service";
+import Login from "../../view/Login";
+import Profile from "../../view/Profile";
+import Cart from "../../view/Cart";
 import Product from "../components/Product";
 
-interface IRouter { }
+interface IRouter {}
 const Router: FC<IRouter> = () => {
+
     return (
         <Routes>
+            <Route path="/entrar" element={<Login />} />
             <Route path="/inicio" element={<Home />} />
             <Route path="/loja/masculino" element={<Store />} />
-            <Route path="/loja/masculino/1" element={<Product />} />
+            <Route path="/loja/masculino/:id" element={<Product />} />
             <Route path="/loja/feminino" element={<Store />} />
-            <Route path="/loja/promocoes" element={<Store />} />
             <Route path="/sobre" element={<About />} />
             <Route path="/atendimento" element={<Service />} />
+            <Route path="/perfil/enderecos" element={<Profile />} />
+            <Route path="/perfil/carteira" element={<Profile />} />
+            <Route path="/perfil" element={<Profile />} />
+            <Route path="/cart" element={<Cart />} />
         </Routes>
     )
 }
