@@ -122,50 +122,6 @@
         }
     }
 
-    &>.three {
-        width: 100%;
-        height: 755px;
-        background-image: url("https://static.wixstatic.com/media/84770f_47eecceda39f45d6b719f9d032e24151.jpg/v1/fill/w_1098,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_47eecceda39f45d6b719f9d032e24151.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &>img {
-            width: 55%;
-            transform: scaleX(-1);
-        }
-
-        &>div {
-            width: 30%;
-            height: 150px;
-            background-color: #000;
-            position: absolute;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 25px;
-            gap: 20px;
-
-            &>button {
-                background-color: #fff;
-                border: none;
-                font-size: 25px;
-                padding: 10px 25px;
-                cursor: pointer;
-                transition: .4s;
-
-                &:hover {
-                    background-color: #000;
-                    color: #fff;
-                }
-            }
-        }
-    }
-
     &>.four {
         width: 100%;
         height: 700px;
@@ -422,6 +378,7 @@
             padding: 0px 190px;
             margin-top: 50px;
         }
+
         &>.baseboard {
             color: #fff;
             display: flex;

@@ -31,13 +31,6 @@ const Home: FC<IHome> = () => {
                     </div>
                 </div>
             </div>
-            <div className="three">
-                <img src="https://i.ibb.co/gD92kh1/pngwing-com.png" alt="" />
-                <div>
-                    <p>DESCONTOS DE 40% A 60%</p>
-                    <button>COMPRAR</button>
-                </div>
-            </div>
             <div className="four">
                 <div className="one">
                     <img src="https://i.ibb.co/sP3kmTQ/pngwing-com-1.png" alt="" />
