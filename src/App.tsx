@@ -3,9 +3,10 @@ import Router from "./shared/router"
 import NavBar from "./shared/components/NavBar"
 import { useLocation } from "react-router-dom"
 import ModalCart from "./shared/components/ModalCart"
-import Contexts, { IUserType, ICartType } from './shared/contexts';
+import Contexts, { IUserType, ICartType, IProductType } from './shared/contexts';
 import userApi from "./shared/services/user"
 import { getCookie } from "./shared/utils/cookies"
+import productApi from "./shared/services/product"
 
 interface IApp {
 
@@ -24,7 +25,9 @@ const App: FC<IApp> = () => {
   })
   const [cart, setCart] = useState<ICartType[]>([])
 
-  const [product, setProduct] = useState<ProductType>({
+
+  const [products, setProducts] = useState<IProductType[]>([])
+  const [product, setProduct] = useState<IProductType>({
     image: '',
     description: '',
     name: '',
@@ -47,6 +50,10 @@ const App: FC<IApp> = () => {
       })
     })
 
+    productApi.listProducts().then((data: any) => {
+      setProducts(data)
+    })
+
     userApi.listCart().then((data: any) => {
       setCart(data)
     })
@@ -60,6 +67,8 @@ const App: FC<IApp> = () => {
       setCart,
       product,
       setProduct,
+      products,
+      setProducts,
       onNavBarChange(value) {
         setNavbarValue(value);
       },
