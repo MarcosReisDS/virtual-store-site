@@ -26,6 +26,7 @@ const Login: FC<ILogin> = () => {
     const [errorMessageSurname, setErrorMessageSurname] = useState<boolean>(false)
     const [errorMessageMailC, setErrorMessageMailC] = useState<boolean>(false)
     const [errorMessagePassC, setErrorMessagePassC] = useState<boolean>(false)
+    const [errorMessageInvalidMail, setErrorMessageInvalidMail] = useState<boolean>(false)
 
     const handleSubmitLogin = (e: React.FormEvent) => {
         e.preventDefault();
@@ -152,10 +153,16 @@ const Login: FC<ILogin> = () => {
         }
 
         await userApi.createUser(users[0])
-
-        userApi.login(mail, password).then((data: any) => {
-            setCookie('token', JSON.stringify({ token: data?.access_token }), 1)
-            navigate("/inicio")
+        .then(() => {
+            userApi.login(mail, password).then((data: any) => {
+                setCookie('token', JSON.stringify({ token: data?.access_token }), 1)
+                navigate("/inicio")
+            })
+        })
+        .catch(() => {
+            setErrorMessageInvalidMail(true)
+            setErrorMessageMail(false);
+            return;
         })
     };
 
@@ -228,6 +235,7 @@ const Login: FC<ILogin> = () => {
                                 <label>Email</label>
                                 <input type="email" placeholder="Seu-email@gmail.com" onChange={(e) => setMail(e.target.value)} />
                                 {errorMessageMailC ? <span className="error">Preencha esse campo</span> : ""}
+                                {errorMessageInvalidMail ? <span className="error">Esse e-mail já existe</span> : ""}
                             </div>
                             <div className="input password">
                                 <label>Senha</label>
