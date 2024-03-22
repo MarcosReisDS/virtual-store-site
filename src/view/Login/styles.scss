@@ -1,43 +1,103 @@
+@import '../../shared/utils/global.scss';
+
 .container-login {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    &>.container-inputs {
-        width: 50%;
+
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+
+    &>.container {
+        width: 100%;
+        height: 100%;
+        position: relative;
         background-color: #f6f7fc;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 70px;
+
+        @include mobile {
+            justify-content: start;
+
+            &.mobile {
+                gap: 17px;
+            }
+
+            &.img {
+                height: 10%;
+            }
+        }
+
         &>.salutation {
             font-size: 28px;
+
+            @include mobile {
+                font-size: 18px;
+                margin-top: 40px;
+
+                &.mobile {
+                    margin-top: 10px;
+                }
+            }
         }
+
         &>.inputs {
             width: 50%;
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            @include mobile {
+                width: 70%;
+                gap: 17px;
+            }
+
             &>.input {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
                 font-size: 17px;
-                
+                position: relative;
+
+                &.password {
+                    &>input {
+                        padding-right: 40px;
+                    }
+                }
+
+                &>label {
+                    font-size: 17px;
+
+                    @include mobile {
+                        font-size: 15px;
+                    }
+                }
+
                 &>input {
                     border: none;
                     font-size: 17px;
                     padding: 15px 10px;
                     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
                     border-radius: 5px;
+
+                    @include mobile {
+                        font-size: 13px;
+                    }
+
+
                     &:focus {
                         outline: none;
                     }
                 }
+
                 &>button {
                     border: none;
                     font-size: 17px;
-                    padding: 15px 10px;
+                    padding: 15px 0px;
                     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
                     border-radius: 5px;
                     background-color: #ffae36;
@@ -45,30 +105,74 @@
                     cursor: pointer;
                     transition: .3s;
                     margin-top: 20px;
+
+                    @include mobile {
+                        font-size: 13px;
+                        padding: 12px 0px;
+                    }
+
                     &:hover {
                         opacity: 0.8;
                     }
                 }
+
                 &>span {
                     font-size: 12px;
                     cursor: default;
                     margin-top: 5px;
+
+                    @include mobile {
+                        font-size: 11px;
+                    }
+
                     &>span {
                         color: #ffae36;
                         cursor: pointer;
                     }
                 }
+
+                &>.container-eye {
+                    position: absolute;
+                    top: 38px;
+                    right: 10px;
+                    display: flex;
+                    padding: 4px;
+                    border-radius: 50%;
+                    font-size: 15px;
+                    cursor: pointer;
+
+                    @include mobile {
+                        font-size: 13px;
+                    }
+                }
+
+                &>.error {
+                    color: red;
+                    position: absolute;
+                    top: 75px;
+                    font-size: 10px;
+                    width: 100%;
+
+                    @include mobile {
+                        top: 65px
+                    }
+
+
+                    &.master {
+                        top: -10px;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                }
             }
         }
-    }
-    &>.img {
-        width: 50%;
-        position: relative;
+
         &>img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         &>.shadow {
             width: 100%;
             height: 100%;
