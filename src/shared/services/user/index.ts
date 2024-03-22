@@ -3,8 +3,8 @@ import Api from "../api";
 class UserApi {
     private user_api = new Api("virtual")
 
-    async listUser(id: number) {
-        let data = await this.user_api.get(`/users/?id=${id}`, {})
+    async listUser(mail: string, token: any) {
+        let data = await this.user_api.get(`/users/?mail=${mail}`, {}, token)
 
         return data
     }
@@ -28,7 +28,7 @@ class UserApi {
     }
 
     async login(mail: string, password: string) {
-        return this.user_api.get("/users", { mail, password })
+        return this.user_api.post("/auth", { email: mail, password })
     }
 
     async createUser(user: UserType) {
