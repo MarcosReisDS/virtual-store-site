@@ -31,12 +31,24 @@ export interface IProductType {
     type: string;
 }
 
+export interface Jwt {
+    email: string;
+    exp: number;
+    iat: number;
+    name: string;
+    sub: number;
+}
+
 export interface IContext {
     user: IUserType
+    users: IUserType[]
     cart: ICartType[]
     product: IProductType
     products: IProductType[]
+    token: string;
+    setToken: Dispatch<SetStateAction<string>>
     setUser: Dispatch<SetStateAction<IUserType>>;
+    setUsers: Dispatch<SetStateAction<IUserType[]>>;
     setCart: Dispatch<SetStateAction<ICartType[]>>;
     setProduct: Dispatch<SetStateAction<IProductType>>;
     setProducts: Dispatch<SetStateAction<IProductType[]>>;
