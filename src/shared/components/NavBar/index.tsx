@@ -40,7 +40,7 @@ const NavBar: FC<INavBar> = () => {
     ]
 
     const handleDeleteCookie = () => {
-        deleteCookie("user")
+        deleteCookie("token")
         navigate(window.location.pathname)
     }
 
@@ -92,7 +92,7 @@ const NavBar: FC<INavBar> = () => {
                     ))}
                 </ul>
                 <ul className="navigation user-cart">
-                    {getCookie("user") ?
+                    {getCookie("token") ?
                         <li className="get" onClick={() => setDropUser(!dropUser)}><a><img src={user.profile} alt="Minha foto" /></a>
                             <ul>
                                 <li onClick={() => setDropUser(!dropUser)}><a><IoIosArrowDown size={20} /></a>
