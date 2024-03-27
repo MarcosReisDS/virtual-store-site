@@ -31,7 +31,7 @@ const createSchema = z.object({
             message: 'A senha precisa ter no mínimo 6 caracteres',
         })
         .regex(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-            'Deve conter pelo menos um caractere especial e uma letra maiúsculaa'
+            'Deve conter pelo menos um caractere especial e uma letra maiúscula'
         ),
 })
 
