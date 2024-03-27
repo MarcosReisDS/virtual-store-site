@@ -86,7 +86,7 @@ const App: FC<IApp> = () => {
         setNavbarValue(value);
       },
     }}>
-      {window.location.pathname == "/entrar" ?
+      {window.location.pathname == "/entrar" || window.location.pathname == "/criar" ?
         ""
         :
         <>
