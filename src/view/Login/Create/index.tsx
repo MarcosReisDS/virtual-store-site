@@ -26,16 +26,19 @@ const createSchema = z.object({
         }),
     password: z.string().nonempty({
         message: 'A senha é obrigatória',
-    }).min(6, {
-        message: 'A senha precisa ter no mínimo 6 caracteres',
-    }),
+    })
+        .min(6, {
+            message: 'A senha precisa ter no mínimo 6 caracteres',
+        })
+        .regex(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+            'Deve conter pelo menos um caractere especial e uma letra maiúscula'
+        ),
 })
 
 type createData = z.infer<typeof createSchema>
 
 interface ICreate { }
 const Create: FC<ICreate> = () => {
-
     const {
         register,
         handleSubmit,

@@ -27,7 +27,6 @@ type loginData = z.infer<typeof loginSchema>
 
 interface IEnter {}
 const Enter: FC<IEnter> = () => {
-
     const {
         register,
         handleSubmit,
