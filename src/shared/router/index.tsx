@@ -4,17 +4,19 @@ import Home from "../../view/Home";
 import Store from "../../view/Store";
 import About from "../../view/About";
 import Service from "../../view/Service";
-import Login from "../../view/Login";
 import Profile from "../../view/Profile";
 import Cart from "../../view/Cart";
 import Product from "../components/Product";
+import Create from "../../view/Login/Create";
+import Enter from "../../view/Login/Enter";
 
 interface IRouter {}
 const Router: FC<IRouter> = () => {
 
     return (
         <Routes>
-            <Route path="/entrar" element={<Login />} />
+            <Route path="/entrar" element={<Enter/>} />
+            <Route path="/criar" element={<Create/>} />
             <Route path="/inicio" element={<Home />} />
             <Route path="/loja/masculino" element={<Store />} />
             <Route path="/loja/masculino/:id" element={<Product />} />
